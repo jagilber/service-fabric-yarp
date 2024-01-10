@@ -20,7 +20,7 @@
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
-	<ClusterConnectionParameters ConnectionEndpoint="" />
+	<ClusterConnectionParameters ConnectionEndpoint="sfjagilber1nt3.eastus.cloudapp.azure.com:19000" X509Credential="true" StoreLocation="CurrentUser" FindType="FindBySubjectName" FindValue="*.jagilber.com" ServerCommonName="*.jagilber.com" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
   <CopyPackageParameters CompressPackage="true" />
 </PublishProfile>

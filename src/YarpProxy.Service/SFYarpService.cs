@@ -111,6 +111,18 @@ namespace Yarp.ServiceFabric.Service
                 .AddHttpLogging(logging =>
                 {
                     logging.LoggingFields = HttpLoggingFields.All;
+                    logging.ResponseHeaders.Add("Yarp-Response-Reason-Phrase");
+
+                    // logging.MediaTypeOptions.AddText("application/javascript");
+                    // logging.RequestBodyLogLimit = 4096;
+                    // logging.ResponseBodyLogLimit = 4096;
+                    // logging.RequestHeaders.Add("X-Forwarded-For");
+                    // logging.RequestHeaders.Add("X-Forwarded-Proto");
+                    // logging.RequestHeaders.Add("X-Forwarded-Host");
+                    // logging.RequestHeaders.Add("X-Forwarded-PathBase");
+                    // logging.RequestHeaders.Add("X-Forwarded-Scheme");
+                    // logging.RequestHeaders.Add("X-Forwarded-ClientCert");
+                    // logging.RequestHeaders.Add("X-Forwarded-ClientCert-Thumbprint");
                 });
 
             var options = new ApplicationInsightsServiceOptions { ConnectionString = builder.Configuration.GetConnectionString("ApplicationInsights") };

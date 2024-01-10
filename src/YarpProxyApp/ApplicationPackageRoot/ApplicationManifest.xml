@@ -2,10 +2,10 @@
 <ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="YarpProxyAppType" ApplicationTypeVersion="1.2.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="YarpProxy_PlacementConstraints" DefaultValue="" />
-    <Parameter Name="YarpProxy_InstanceCount" DefaultValue="1" />
+    <Parameter Name="YarpProxy_InstanceCount" DefaultValue="-1" />
     <Parameter Name="YarpProxy_HttpPort" DefaultValue="19082" />
     <Parameter Name="YarpProxy_HttpsPort" DefaultValue="443" />
-    <Parameter Name="FabricDiscovery_InstanceCount" DefaultValue="1" />
+    <Parameter Name="FabricDiscovery_InstanceCount" DefaultValue="-1" />
     <Parameter Name="FabricDiscovery_AbortAfterTimeoutInSeconds" DefaultValue="600" />
     <Parameter Name="FabricDiscovery_AbortAfterConsecutiveFailures" DefaultValue="3" />
     <Parameter Name="FabricDiscovery_FullRefreshPollPeriodInSeconds" DefaultValue="300" />

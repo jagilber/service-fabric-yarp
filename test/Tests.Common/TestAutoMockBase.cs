@@ -3,6 +3,7 @@
 
 using System;
 using Autofac.Core;
+using Autofac.Extras.FakeItEasy;
 using Autofac.Extras.Moq;
 using Moq;
 using Yarp.ServiceFabric.CoreServicesBorrowed.CoreFramework;
@@ -72,7 +73,8 @@ namespace Tests.Common
             where TService : class
         {
             Contracts.CheckValue(instance, nameof(instance));
-            this.AutoMock.Provide(instance);
+            AutoFake autoFake = new AutoFake();
+            autoFake.Provide(instance);
         }
 
         /// <summary>
@@ -85,7 +87,8 @@ namespace Tests.Common
             where TService : class
             where TImplementation : TService
         {
-            return (TImplementation)this.AutoMock.Provide<TService, TImplementation>();
+            AutoFake autoFake = new AutoFake();
+            return (TImplementation)autoFake.Provide<TService, TImplementation>();
         }
 
         /// <inheritdoc/>
